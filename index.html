@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Ahlul Zikri | Portfolio Dinamis</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-animation" id="bgDots"></div>
+
+<div class="profile-card">
+    <div class="profile-header">
+        <div class="avatar-wrapper">
+            <img src="foto 1.jpeg" alt="Ahlul Zikri" class="avatar-img" id="avatarImg">
+            <div class="status-badge"></div>
+        </div>
+        <h1>AHLUL ZIKRI</h1>
+        <div class="title">✨ UI/UX Designer & Frontend Developer ✨</div>
+        <div class="location-text">
+            <i class="fas fa-map-marker-alt"></i> Aceh, Indonesia 
+            <i class="far fa-calendar-alt"></i> Bergabung 2026
+        </div>
+    </div>
+
+    <div class="profile-content">
+        <!-- Kolom Kiri: Biodata -> Tentang Saya -> Keahlian -> Proyek -->
+        <div class="info-panel">
+            <!-- Biodata Diri -->
+            <div class="section">
+                <h3><i class="fas fa-user-astronaut"></i> Biodata Diri</h3>
+                <ul class="detail-list">
+                    <li><i class="fas fa-user"></i><span>Nama Lengkap:</span> Ahlul Zikri</li>
+                    <li><i class="fas fa-birthday-cake"></i><span>Tanggal Lahir:</span> 10 Oktober 2005</li>
+                    <li><i class="fas fa-phone-alt"></i><span>No. Telepon:</span> +62 853 7273 5071</li>
+                    <li><i class="fas fa-envelope"></i><span>Email:</span> zikriahlul28@gmail.com</li>
+                    <li><i class="fas fa-globe"></i><span>Website:</span> www.ahlulzikri.com</li>
+                    <li><i class="fas fa-code"></i><span>Hobi:</span> Desain Grafis, Nonton Film, Badminton</li>
+                </ul>
+            </div>
+
+            <!-- Tentang Saya -->
+            <div class="section">
+                <h3><i class="fas fa-heart"></i> Tentang Saya</h3>
+                <p class="about-text">Saya seorang desainer dan developer yang antusias dalam menciptakan pengalaman digital yang indah dan fungsional. Memiliki passion di bidang desain antarmuka serta pengembangan front-end. Saat ini bekerja sebagai freelancer dan juga membagikan ilmu melalui workshop design thinking.</p>
+                <button class="btn-more" id="moreInfoBtn"><i class="fas fa-hand-peace"></i> Hubungi Saya <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Keahlian & Tools -->
+            <div class="section">
+                <h3><i class="fas fa-laptop-code"></i> Keahlian & Tools</h3>
+                <div class="skill-item"><div class="skill-name"><span>Figma / UI Design</span><span>90%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:90%"></div></div></div>
+                <div class="skill-item"><div class="skill-name"><span>HTML5 / CSS3 / JS</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:85%"></div></div></div>
+                <div class="skill-item"><div class="skill-name"><span>React JS</span><span>78%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:78%"></div></div></div>
+                <div class="skill-item"><div class="skill-name"><span>Adobe XD & PS</span><span>88%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:88%"></div></div></div>
+            </div>
+
+            <!-- Featured Projects -->
+            <div class="section">
+                <h3><i class="fas fa-rocket"></i> Featured Projects</h3>
+                <div class="projects-showcase">
+                    <a href="https://ahlulzikri.github.io/spotytube/" target="_blank" class="project-nexus">
+                        <div class="project-img"><img src="fototok.jpg" alt="Spotytube" onerror="this.src='https://placehold.co/400x200/1e293b/facc15?text=Spotytube'"><span class="project-label"><i class="fas fa-play"></i> Streaming</span></div>
+                        <div class="project-info"><h4>🎵 Spotytube</h4><p>Streaming musik & video hybrid, UI modern dengan fitur playlist.</p></div>
+                    </a>
+                    <a href="https://ahlulzikri.github.io/kelolakeuangan/" target="_blank" class="project-nexus">
+                        <div class="project-img"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Kelola Keuangan"><span class="project-label"><i class="fas fa-chart-line"></i> Finance</span></div>
+                        <div class="project-info"><h4>💰 Kelola Keuangan</h4><p>Aplikasi pencatatan keuangan pribadi, analisis budget & pengeluaran.</p></div>
+                    </a>
+                </div>
+                <div style="margin-top: 12px; text-align: center;">
+                    <a href="https://ahlulzikri.github.io/kelolakeuangan/" target="_blank" class="inline-project-link"><i class="fas fa-external-link-alt"></i> Kunjungi Kelola Keuangan</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan: Statistik + Sosial Media + Waktu Aktif -->
+        <div class="stats-panel">
+            <div class="section">
+                <h3><i class="fas fa-chart-line"></i> Statistik</h3>
+                <div class="stat-grid">
+                    <div class="stat-card"><i class="fas fa-project-diagram"></i><div class="stat-info"><h4>Proyek Selesai</h4><div class="number">34+</div></div></div>
+                    <div class="stat-card"><i class="fas fa-users"></i><div class="stat-info"><h4>Klien Puas</h4><div class="number">28</div></div></div>
+                    <div class="stat-card"><i class="fas fa-trophy"></i><div class="stat-info"><h4>Penghargaan</h4><div class="number">5</div></div></div>
+                    <div class="stat-card"><i class="fas fa-coffee"></i><div class="stat-info"><h4>Kopi Setiap Hari</h4><div class="number">3+</div></div></div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-share-alt"></i> Media Sosial</h3>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fab fa-dribbble"></i></a>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.75rem;"><i class="fas fa-music"></i> playlist favorit: Lofi beats & Jazz</p>
+            </div>
+
+            <div class="section">
+                <h3><i class="fas fa-clock"></i> Waktu Aktif</h3>
+                <div class="stat-card" style="background: #FEF9E6;">
+                    <i class="fas fa-calendar-week"></i>
+                    <div class="stat-info">
+                        <h4>Online Setiap Hari</h4>
+                        <div class="number live-clock-style" id="liveClock">--:--:--</div>
+                    </div>
+                </div>
+                <p style="font-size: 0.7rem; margin-top: 12px;">💬 "Selalu terbuka untuk kolaborasi keren"</p>
+            </div>
+        </div>
+    </div>
+    <div class="profile-footer">
+        <i class="far fa-copyright"></i> 2026 Ahlul Zikri | Portfolio Interaktif dengan Animasi
+    </div>
+</div>
+
+<div id="toastMsg" class="toast-msg">📬 Info kontak: zikriahlul28@gmail.com</div>
+
+<!-- Custom JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>
