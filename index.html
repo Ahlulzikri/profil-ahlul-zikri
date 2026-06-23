@@ -2,92 +2,236 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>Ahlul Zikri | Portfolio Dinamis</title>
-    <!-- Font Awesome 6 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Profil Pribadi | Portfolio Dinamis</title>
+    <!-- Font Awesome 6 (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Google Fonts: Poppins & Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional inline styling for new project */
+        .project-nexus {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-radius: 20px;
+            background: #ffffff;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(230, 242, 255, 0.6);
+            cursor: pointer;
+        }
+        .project-nexus:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 20, 50, 0.12);
+        }
+        .project-img {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            background-color: #eef2f7;
+            transition: all 0.2s;
+        }
+        .project-label {
+            position: absolute;
+            bottom: 14px;
+            left: 16px;
+            background: rgba(0, 20, 40, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 6px 16px;
+            border-radius: 40px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+        }
+        .project-info {
+            padding: 18px 20px 22px;
+        }
+        .project-info h3 {
+            margin: 0 0 6px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0b1e2e;
+        }
+        .project-tech {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #3e6b9e;
+            background: #eaf1fd;
+            display: inline-block;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        .project-info p {
+            font-size: 0.85rem;
+            color: #2c4055;
+            margin: 6px 0 0;
+            opacity: 0.9;
+        }
+        #projectsContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 16px 0 10px;
+        }
+        @media (min-width: 700px) {
+            #projectsContainer {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .project-nexus:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                justify-self: center;
+            }
+        }
+        @media (max-width: 600px) {
+            .project-img {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
+
 <div class="bg-animation" id="bgDots"></div>
 
 <div class="profile-card">
     <div class="profile-header">
         <div class="avatar-wrapper">
-            <img src="foto 1.jpeg" alt="Ahlul Zikri" class="avatar-img" id="avatarImg">
+            <img src="fotoanjay.jpg" alt="Profile Avatar" class="avatar-img" id="avatarImg">
             <div class="status-badge"></div>
         </div>
         <h1>AHLUL ZIKRI</h1>
         <div class="title">✨ UI/UX Designer & Frontend Developer ✨</div>
-        <div class="location-text">
-            <i class="fas fa-map-marker-alt"></i> Aceh, Indonesia 
-            <i class="far fa-calendar-alt"></i> Bergabung 2026
-        </div>
+        <p style="margin-top: 12px; font-size: 0.85rem; opacity: 0.9;"><i class="fas fa-map-marker-alt"></i> Aceh, Indonesia | <i class="far fa-calendar-alt"></i> Bergabung 2026</p>
     </div>
 
     <div class="profile-content">
-        <!-- Kolom Kiri: Biodata -> Tentang Saya -> Keahlian -> Proyek -->
+        <!-- Kolom kiri: Informasi Lengkap & Proyek -->
         <div class="info-panel">
-            <!-- Biodata Diri -->
             <div class="section">
                 <h3><i class="fas fa-user-astronaut"></i> Biodata Diri</h3>
                 <ul class="detail-list">
                     <li><i class="fas fa-user"></i><span>Nama Lengkap:</span> Ahlul Zikri</li>
-                    <li><i class="fas fa-birthday-cake"></i><span>Tanggal Lahir:</span> 10 Oktober 2005</li>
-                    <li><i class="fas fa-phone-alt"></i><span>No. Telepon:</span> +62 853 7273 5071</li>
+                    <li><i class="fas fa-birthday-cake"></i><span>Tanggal Lahir:</span> 10 oktober 2005</li>
+                    <li><i class="fas fa-phone-alt"></i><span>No. Telepon:</span> +62 85372735071</li>
                     <li><i class="fas fa-envelope"></i><span>Email:</span> zikriahlul28@gmail.com</li>
                     <li><i class="fas fa-globe"></i><span>Website:</span> www.ahlulzikri.com</li>
-                    <li><i class="fas fa-code"></i><span>Hobi:</span> Desain Grafis, Nonton Film, Badminton</li>
+                    <li><i class="fas fa-code"></i><span>Hobi:</span> Desain Grafis, Nonton Film, badminton</li>
                 </ul>
             </div>
 
-            <!-- Tentang Saya -->
-            <div class="section">
-                <h3><i class="fas fa-heart"></i> Tentang Saya</h3>
-                <p class="about-text">Saya seorang desainer dan developer yang antusias dalam menciptakan pengalaman digital yang indah dan fungsional. Memiliki passion di bidang desain antarmuka serta pengembangan front-end. Saat ini bekerja sebagai freelancer dan juga membagikan ilmu melalui workshop design thinking.</p>
-                <button class="btn-more" id="moreInfoBtn"><i class="fas fa-hand-peace"></i> Hubungi Saya <i class="fas fa-arrow-right"></i></button>
-            </div>
-
-            <!-- Keahlian & Tools -->
             <div class="section">
                 <h3><i class="fas fa-laptop-code"></i> Keahlian & Tools</h3>
-                <div class="skill-item"><div class="skill-name"><span>Figma / UI Design</span><span>90%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:90%"></div></div></div>
-                <div class="skill-item"><div class="skill-name"><span>HTML5 / CSS3 / JS</span><span>85%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:85%"></div></div></div>
-                <div class="skill-item"><div class="skill-name"><span>React JS</span><span>78%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:78%"></div></div></div>
-                <div class="skill-item"><div class="skill-name"><span>Adobe XD & PS</span><span>88%</span></div><div class="progress-bar"><div class="progress-fill" style="--target:88%"></div></div></div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Figma / UI Design</span><span>90%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="--target:90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>HTML5 / CSS3 / JS</span><span>85%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="--target:85%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>React JS</span><span>78%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="--target:78%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name"><span>Adobe XD & PS</span><span>88%</span></div>
+                    <div class="progress-bar"><div class="progress-fill" style="--target:88%"></div></div>
+                </div>
             </div>
 
-            <!-- Featured Projects -->
-            <div class="section">
-                <h3><i class="fas fa-rocket"></i> Featured Projects</h3>
-                <div class="projects-showcase">
+            <!-- SECTION PROYEK dengan 3 proyek (ditambahkan proyek ketiga) -->
+            <section id="projects">
+                <h2 class="section-title fade-up">Featured Projects</h2>
+                <div class="projects-showcase" id="projectsContainer">
+                    <!-- Proyek 1: spotytube -->
                     <a href="https://ahlulzikri.github.io/spotytube/" target="_blank" class="project-nexus">
-                        <div class="project-img"><img src="fototok.jpg" alt="Spotytube" onerror="this.src='https://placehold.co/400x200/1e293b/facc15?text=Spotytube'"><span class="project-label"><i class="fas fa-play"></i> Streaming</span></div>
-                        <div class="project-info"><h4>🎵 Spotytube</h4><p>Streaming musik & video hybrid, UI modern dengan fitur playlist.</p></div>
+                        <div class="project-img" id="donghuaImg">
+                            <span class="project-label"><i class="fas fa-play"></i> Streaming</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>spotytube</h3>
+                            <div class="project-tech">HTML · CSS · JS</div>
+                            <p>Platform streaming donghua dengan UI imersif.</p>
+                        </div>
                     </a>
-                    <a href="https://ahlulzikri.github.io/kelolakeuangan/" target="_blank" class="project-nexus">
-                        <div class="project-img"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Kelola Keuangan"><span class="project-label"><i class="fas fa-chart-line"></i> Finance</span></div>
-                        <div class="project-info"><h4>💰 Kelola Keuangan</h4><p>Aplikasi pencatatan keuangan pribadi, analisis budget & pengeluaran.</p></div>
+                    <!-- Proyek 2: Pintar Tabungan -->
+                    <a href="tabungan.html" class="project-nexus">
+                        <div class="project-img" style="background-image: url('https://images.pexels.com/photos/4386365/pexels-photo-4386365.jpeg?w=600&h=400&fit=crop');">
+                            <span class="project-label"><i class="fas fa-wallet"></i> Fintech</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pintar Tabungan</h3>
+                            <div class="project-tech">JS · LocalStorage · DOM</div>
+                            <p>Aplikasi pencatat keuangan dengan saldo dinamis.</p>
+                        </div>
+                    </a>
+                    <!-- Proyek 3: Pendaftaran Turnamen (baru) -->
+                    <a href="https://ahlulzikri.github.io/tugasmitem/" target="_blank" class="project-nexus">
+                        <div class="project-img" style="background-image: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?w=600&h=400&fit=crop&auto=compress');">
+                            <span class="project-label"><i class="fas fa-clipboard-list"></i> To-Do</span>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pendaftaran Turnamen</h3>
+                            <div class="project-tech">HTML · CSS · JavaScript</div>
+                            <p>Task manager sederhana untuk produktivitas harian.</p>
+                        </div>
                     </a>
                 </div>
-                <div style="margin-top: 12px; text-align: center;">
-                    <a href="https://ahlulzikri.github.io/kelolakeuangan/" target="_blank" class="inline-project-link"><i class="fas fa-external-link-alt"></i> Kunjungi Kelola Keuangan</a>
-                </div>
+            </section>
+            <!-- END PROYEK -->
+
+            <div class="section">
+                <h3><i class="fas fa-heart"></i> Tentang Saya</h3>
+                <p style="line-height: 1.5; color: #2d3e50;">Saya seorang desainer dan developer yang antusias dalam menciptakan pengalaman digital yang indah dan fungsional. Memiliki passion di bidang desain antarmuka serta pengembangan front-end. Saat ini bekerja sebagai freelancer dan juga membagikan ilmu melalui workshop design thinking.</p>
+                <button class="btn-more" id="moreInfoBtn"><i class="fas fa-hand-peace"></i> Hubungi Saya <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
 
-        <!-- Kolom Kanan: Statistik + Sosial Media + Waktu Aktif -->
+        <!-- Kolom kanan: Statistik dan sosial media -->
         <div class="stats-panel">
             <div class="section">
                 <h3><i class="fas fa-chart-line"></i> Statistik</h3>
                 <div class="stat-grid">
-                    <div class="stat-card"><i class="fas fa-project-diagram"></i><div class="stat-info"><h4>Proyek Selesai</h4><div class="number">34+</div></div></div>
-                    <div class="stat-card"><i class="fas fa-users"></i><div class="stat-info"><h4>Klien Puas</h4><div class="number">28</div></div></div>
-                    <div class="stat-card"><i class="fas fa-trophy"></i><div class="stat-info"><h4>Penghargaan</h4><div class="number">5</div></div></div>
-                    <div class="stat-card"><i class="fas fa-coffee"></i><div class="stat-info"><h4>Kopi Setiap Hari</h4><div class="number">3+</div></div></div>
+                    <div class="stat-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="stat-info">
+                            <h4>Proyek Selesai</h4>
+                            <div class="number">34+</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <div class="stat-info">
+                            <h4>Klien Puas</h4>
+                            <div class="number">28</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <div class="stat-info">
+                            <h4>Penghargaan</h4>
+                            <div class="number">5</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-coffee"></i>
+                        <div class="stat-info">
+                            <h4>Kopi Setiap Hari</h4>
+                            <div class="number">3+</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -100,30 +244,27 @@
                     <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="social-btn"><i class="fab fa-dribbble"></i></a>
                 </div>
-                <p style="margin-top: 15px; font-size: 0.75rem;"><i class="fas fa-music"></i> playlist favorit: Lofi beats & Jazz</p>
+                <p style="margin-top: 16px; font-size: 0.8rem;"><i class="fas fa-music"></i> playlist favorit: Lofi beats & Jazz</p>
             </div>
 
             <div class="section">
                 <h3><i class="fas fa-clock"></i> Waktu Aktif</h3>
-                <div class="stat-card" style="background: #FEF9E6;">
+                <div class="stat-card" style="background: #f1f4ff;">
                     <i class="fas fa-calendar-week"></i>
                     <div class="stat-info">
                         <h4>Online Setiap Hari</h4>
-                        <div class="number live-clock-style" id="liveClock">--:--:--</div>
+                        <div class="number" id="liveClock">--:--</div>
                     </div>
                 </div>
-                <p style="font-size: 0.7rem; margin-top: 12px;">💬 "Selalu terbuka untuk kolaborasi keren"</p>
+                <p style="font-size: 0.7rem; margin-top: 10px;">💬 "Selalu terbuka untuk kolaborasi keren"</p>
             </div>
         </div>
     </div>
     <div class="profile-footer">
-        <i class="far fa-copyright"></i> 2026 Ahlul Zikri | Portfolio Interaktif dengan Animasi
+        <i class="far fa-copyright"></i> 2026 ahlul zikri | Portfolio Interaktif dengan Animasi
     </div>
 </div>
 
-<div id="toastMsg" class="toast-msg">📬 Info kontak: zikriahlul28@gmail.com</div>
-
-<!-- Custom JavaScript -->
 <script src="script.js"></script>
 </body>
 </html>
